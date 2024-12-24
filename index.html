@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Categories</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .todo-table th, .todo-table td {
+            vertical-align: middle;
+            background-color: rgb(190, 190, 170);
+        }
+
+        
+
+    
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header text-center bg-info text-white">
+            <h2>My Todo List</h2>
+        </div>
+        <div class="card-body">
+    
+            <form id="todoForm" class="mb-4">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="taskInput" class="form-label">Task</label>
+                        <input type="text" id="taskInput" class="form-control" placeholder="Enter your task" required>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="categorySelect" class="form-label">Category</label>
+                        <select id="categorySelect" class="form-select" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Books to read">Books to read</option>
+                            <option value="To Buy">To Buy</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning w-100">Add Task</button>
+            </form>
+            <hr>
+            <!-- table -->
+            <table class="table table-bordered todo-table">
+                <thead class="thead-light">
+                    <tr>
+                        <th style="width: 70%;">Task Name</th>
+                        <th style="width: 20%;">Category</th>
+                        <th style="width: 10%;">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="todoList">
+                    <!-- dynamic-data -->
+                </tbody>
+            </table>
+        </div>
+
+        <script src="game_logic.js"></script>
+    </div>
+</body>
+
+</html>
